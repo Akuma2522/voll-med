@@ -27,6 +27,7 @@ public class Medico {
     private Long id;
     private String nombre;
     private String email;
+    private String telefono;
     private String documento;
     @Enumerated(EnumType.STRING)
     // @Enumerated para indicar que se trabaja con un enum y seran datos de tipo String
@@ -39,6 +40,7 @@ public class Medico {
     {   this.nombre=datosRegistroMedicos.nombre();
         this.documento=datosRegistroMedicos.documento();
         this.email=datosRegistroMedicos.email();
+        this.telefono=datosRegistroMedicos.telefono();
         this.especialidad=datosRegistroMedicos.especialidad();
         this.direccion=new Direccion(datosRegistroMedicos.direccion());
     }
