@@ -35,6 +35,7 @@ public class Medico {
     @Embedded
     //Con esta anotación, indicamos que el campo o la propiedad de una entidad es una instancia de una clase que puede ser integrable. Es decir, para que funcione, el campo que hayamos anotado como @Embedded, debe corresponderse con una clase que tenga la anotación @Embeddable.
     private Direccion direccion;
+    private boolean activo;
 
     public Medico(DatosRegistroMedicos datosRegistroMedicos)
     {   this.nombre=datosRegistroMedicos.nombre();
@@ -43,5 +44,19 @@ public class Medico {
         this.telefono=datosRegistroMedicos.telefono();
         this.especialidad=datosRegistroMedicos.especialidad();
         this.direccion=new Direccion(datosRegistroMedicos.direccion());
+        this.activo=true;
+    }
+
+    public void actualizarDatos(DatosActualizarMedicos datosActualizarMedicos) {
+        if (datosActualizarMedicos.nombre()!=null){
+        this.nombre=datosActualizarMedicos.nombre();}
+        if (datosActualizarMedicos.documento()!=null){
+        this.documento=datosActualizarMedicos.documento();}
+        if (datosActualizarMedicos.direccion()!=null){
+        this.direccion=direccion.actualizarDatos(datosActualizarMedicos.direccion());}
+    }
+
+    public void desactivarMedico() {
+        this.activo=false;
     }
 }
