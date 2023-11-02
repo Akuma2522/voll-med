@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.direccion.DatosDireccion;
 import med.voll.api.direccion.Direccion;
 //@Table para indicar a JPA el nombre de la tabla en la base de datos a la que estara vinculada
 @Table(name = "medicos")
