@@ -1,11 +1,11 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.direccion.Direccion;
+import med.voll.api.domain.direccion.Direccion;
 //@Table para indicar a JPA el nombre de la tabla en la base de datos a la que estara vinculada
 @Table(name = "medicos")
 //@Entity para indicar que es una entidad de JPA y como llamarla
